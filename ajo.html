@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AjoMoney - Alternative finance for underserved Africans</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome for high-quality SVG/Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                    },
+                    colors: {
+                        brandPurple: '#5D17EB',
+                        brandPurpleHover: '#4B12C2',
+                        brandGreen: '#85E323',
+                        brandGreenLight: '#D9F99D',
+                        softGray: '#F9FAFB',
+                        pastelPink: '#FFF0F3',
+                        pastelPurple: '#F5EEFF',
+                        pastelYellow: '#FEF9EC',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .custom-shadow-green {
+            box-shadow: 4px 4px 0px 0px #85E323;
+        }
+
+        .custom-shadow-purple {
+            box-shadow: 4px 4px 0px 0px #5D17EB;
+        }
+
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="font-sans text-gray-900 bg-[#FCFCFD] overflow-x-hidden">
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur-md border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-brandPurple text-white flex items-center justify-center font-bold">
+                    <i class="fa-solid fa-arrows-spin"></i>
+                </div>
+                <span class="text-2xl font-bold text-brandPurple tracking-tight lowercase">ajo<span
+                        class="text-gray-900">money</span></span>
+            </a>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-8 font-medium text-gray-600 text-sm">
+                <a href="#features" class="hover:text-brandPurple transition-colors flex items-center gap-1">Products <i
+                        class="fa-solid fa-chevron-down text-[10px]"></i></a>
+                <a href="#partner" class="hover:text-brandPurple transition-colors flex items-center gap-1">Platforms <i
+                        class="fa-solid fa-chevron-down text-[10px]"></i></a>
+                <a href="#faq" class="hover:text-brandPurple transition-colors">FAQs</a>
+                <a href="#blog" class="hover:text-brandPurple transition-colors">Blog</a>
+            </nav>
+
+            <!-- CTA Buttons -->
+            <div class="hidden md:flex items-center gap-4">
+                <button onclick="openModal('get-started-modal')"
+                    class="bg-brandPurple text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-brandPurpleHover hover:translate-y-[-1px] transition-all custom-shadow-green">
+                    Get Started
+                </button>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button onclick="toggleMobileMenu()"
+                class="md:hidden text-gray-700 hover:text-brandPurple p-2 focus:outline-none">
+                <i id="menu-icon" class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white border-b border-gray-100 px-6 py-4 space-y-3 transition-all duration-300">
+            <a href="#features" onclick="toggleMobileMenu()"
+                class="block font-medium text-gray-700 hover:text-brandPurple py-2">Products</a>
+            <a href="#partner" onclick="toggleMobileMenu()"
+                class="block font-medium text-gray-700 hover:text-brandPurple py-2">Platforms</a>
+            <a href="#faq" onclick="toggleMobileMenu()"
+                class="block font-medium text-gray-700 hover:text-brandPurple py-2">FAQs</a>
+            <a href="#blog" onclick="toggleMobileMenu()"
+                class="block font-medium text-gray-700 hover:text-brandPurple py-2">Blog</a>
+            <button onclick="toggleMobileMenu(); openModal('get-started-modal')"
+                class="w-full bg-brandPurple text-white py-3 rounded-full font-semibold hover:bg-brandPurpleHover hover:translate-y-[-1px] transition-all text-center custom-shadow-green">
+                Get Started
+            </button>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="relative py-12 md:py-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+            <!-- Hero Left -->
+            <div class="lg:col-span-6 space-y-6">
+                <div
+                    class="inline-flex items-center gap-2 bg-purple-50 text-brandPurple px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider">
+                    AJO - ESUSU - ADASHE
+                </div>
+
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.15] tracking-tight">
+                    Alternative <span class="relative inline-block">
+                        finance
+                        <svg class="absolute -bottom-1 left-0 w-full text-brandGreen h-3" viewBox="0 0 100 15"
+                            preserveAspectRatio="none" fill="none" stroke="currentColor" stroke-width="4"
+                            stroke-linecap="round">
+                            <path d="M5,10 Q45,18 95,5"></path>
+                        </svg>
+                    </span>
+                    for<br>
+                    <span class="text-brandGreen">underserved</span> Africans.
+                </h1>
+
+                <p class="text-lg text-gray-600 leading-relaxed max-w-xl">
+                    We make access to micro-credit easy for SMEs and corporate worker at zero-interest. Become a part
+                    of our community financing digital rotating savings and credit platform (ROSCA) to get started.
+                </p>
+
+                <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                    <button onclick="openModal('get-started-modal')"
+                        class="bg-brandPurple text-white px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 custom-shadow-green hover:translate-y-[-2px] hover:custom-shadow-purple transition-all duration-200">
+                        Get started <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Hero Right (Custom Collaged Illustration with Interactive UI widgets) -->
+            <div class="lg:col-span-6 relative flex justify-center items-center mt-12 lg:mt-0">
+                <!-- Outer decorative circle -->
+                <div
+                    class="absolute w-[105%] aspect-square rounded-full border-[1.5px] border-dashed border-brandGreen/60 animate-[spin_100s_linear_infinite]">
+                </div>
+
+                <!-- Main central photo representing dynamic African marketplace/youth -->
+                <div
+                    class="relative w-full max-w-md aspect-square bg-gray-100 rounded-[2.5rem] overflow-hidden border-[6px] border-white z-10 shadow-sm">
+                    <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=800"
+                        alt="Smiling young African entrepreneurs" class="w-full h-full object-cover">
+                </div>
+
+                <!-- Floating Card 1: Femi Sam -->
+                <div
+                    class="absolute top-12 -left-8 bg-[#f2ecfc] p-4 rounded-3xl flex items-center gap-3 z-20 animate-[bounce_6s_ease-in-out_infinite]">
+                    <div
+                        class="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=150"
+                            alt="Femi" class="w-full h-full object-cover grayscale">
+                    </div>
+                    <div class="pr-4">
+                        <p class="font-bold text-sm text-gray-900">Femi Sam</p>
+                        <p class="text-[11px] text-gray-500 font-medium">Group Admin</p>
+                    </div>
+                </div>
+
+                <!-- Floating Small Avatars (Top Right) -->
+                <div class="absolute -top-4 right-8 flex flex-col items-center z-20 animate-[bounce_7s_ease-in-out_infinite]">
+                    <div class="w-16 h-16 rounded-full bg-white p-[3px] shadow-sm">
+                        <img src="https://images.unsplash.com/photo-1531384441138-2736e62e0919?auto=format&fit=crop&q=80&w=150" alt="Avatar" class="w-full h-full rounded-full object-cover">
+                    </div>
+                    <div class="text-brandGreen text-2xl -my-2 ml-16">
+                        <svg class="w-8 h-8 text-brandGreen" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 5s4-1 10 3s4 9 4 9" />
+                            <path d="M15 17h4v-4" />
+                        </svg>
+                    </div>
+                    <div class="w-[4.5rem] h-[4.5rem] rounded-full bg-white p-[3px] shadow-sm ml-20 relative">
+                        <div class="absolute -inset-3 border-[1.5px] border-dashed border-purple-400 rounded-full animate-[spin_20s_linear_infinite]"></div>
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&q=80&w=150" alt="Avatar" class="w-full h-full rounded-full object-cover">
+                    </div>
+                </div>
+
+                <!-- Floating Card 2: Sarah James -->
+                <div
+                    class="absolute -bottom-4 right-0 bg-gradient-to-r from-white/95 to-brandGreenLight/95 backdrop-blur-md p-4 rounded-3xl shadow-lg flex items-center gap-3 border border-white/50 z-20 animate-[bounce_5s_ease-in-out_infinite_1s]">
+                    <div class="relative">
+                        <div
+                            class="w-12 h-12 rounded-full flex items-center justify-center overflow-hidden border-2 border-white shadow-sm">
+                            <img src="https://images.unsplash.com/photo-1531123414770-ee36a5382eb6?auto=format&fit=crop&q=80&w=150"
+                                alt="Sarah" class="w-full h-full object-cover">
+                        </div>
+                        <div class="absolute -bottom-1 -right-1 bg-white rounded-full p-[2px] flex items-center justify-center shadow-sm">
+                            <i class="fa-solid fa-circle-check text-brandGreen text-[12px]"></i>
+                        </div>
+                    </div>
+                    <div class="pr-8">
+                        <p class="font-bold text-base text-gray-900">Sarah James</p>
+                        <p class="text-[11px] text-gray-500 font-medium">Vendor Owner</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 2: COMMUNITY FINANCING (ROSCA) -->
+    <section id="rosca-section" class="py-20 bg-[#F7FBEA] relative">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+            <!-- Left: Text -->
+            <div class="lg:col-span-5 space-y-6">
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                    Community financing (ROSCA).
+                </h2>
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    By being a member of a rotating savings and credit group, you can collect early save money with
+                    people of similar prospective significance and relate collection.
+                </p>
+                <div class="pt-2">
+                    <a href="#calculator"
+                        class="inline-flex items-center gap-2 bg-brandPurple text-white px-8 py-3.5 rounded-full font-bold hover:bg-brandPurpleHover hover:translate-y-[-2px] transition-all custom-shadow-green">
+                        Learn more <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Interactive Circular ROSCA Visualization Widget -->
+            <div class="lg:col-span-7 flex flex-col items-center justify-center">
+                <div class="bg-white p-8 rounded-3xl shadow-xl border border-lime-100 w-full max-w-xl">
+                    <h3 class="font-bold text-xl text-gray-900 mb-6 text-center">Interactive Rotational Ajo Demo</h3>
+
+                    <!-- SVG Circular Cycle Illustration -->
+                    <div class="relative w-72 h-72 mx-auto flex items-center justify-center">
+                        <!-- Rotation Track -->
+                        <div
+                            class="absolute w-56 h-56 rounded-full border-4 border-dashed border-purple-100 animate-[spin_40s_linear_infinite]">
+                        </div>
+
+                        <!-- Center Pool Value -->
+                        <div
+                            class="z-10 bg-brandPurple text-white p-6 rounded-full w-40 h-40 flex flex-col items-center justify-center text-center shadow-lg">
+                            <span class="text-xs uppercase tracking-widest text-brandGreen font-bold">Total Pool</span>
+                            <span id="center-pool-display" class="text-2xl font-black mt-1">₦250,000</span>
+                            <span class="text-[10px] text-purple-200 mt-1">Next Hand Out</span>
+                        </div>
+
+                        <!-- User Node 1 (Top) -->
+                        <div class="absolute -top-3 left-1/2 -translate-x-1/2 flex flex-col items-center z-20">
+                            <div
+                                class="w-12 h-12 rounded-full border-2 border-brandPurple bg-white flex items-center justify-center overflow-hidden shadow-md">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=120"
+                                    class="object-cover w-full h-full">
+                            </div>
+                            <span
+                                class="bg-brandPurple text-white text-[9px] font-bold px-2 py-0.5 rounded-full mt-1">Active</span>
+                        </div>
+
+                        <!-- User Node 2 (Right) -->
+                        <div class="absolute right-0 top-1/2 -translate-y-1/2 flex flex-col items-center z-20">
+                            <div
+                                class="w-12 h-12 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center overflow-hidden shadow-md">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=120"
+                                    class="object-cover w-full h-full">
+                            </div>
+                            <span
+                                class="bg-gray-100 text-gray-500 text-[9px] font-semibold px-2 py-0.5 rounded-full mt-1">Month
+                                2</span>
+                        </div>
+
+                        <!-- User Node 3 (Bottom) -->
+                        <div class="absolute -bottom-3 left-1/2 -translate-x-1/2 flex flex-col items-center z-20">
+                            <div
+                                class="w-12 h-12 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center overflow-hidden shadow-md">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80&w=120"
+                                    class="object-cover w-full h-full">
+                            </div>
+                            <span
+                                class="bg-gray-100 text-gray-500 text-[9px] font-semibold px-2 py-0.5 rounded-full mt-1">Month
+                                3</span>
+                        </div>
+
+                        <!-- User Node 4 (Left) -->
+                        <div class="absolute left-0 top-1/2 -translate-y-1/2 flex flex-col items-center z-20">
+                            <div
+                                class="w-12 h-12 rounded-full border-2 border-gray-200 bg-white flex items-center justify-center overflow-hidden shadow-md">
+                                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&q=80&w=120"
+                                    class="object-cover w-full h-full">
+                            </div>
+                            <span
+                                class="bg-gray-100 text-gray-500 text-[9px] font-semibold px-2 py-0.5 rounded-full mt-1">Month
+                                4</span>
+                        </div>
+                    </div>
+
+                    <!-- Calculator Inputs -->
+                    <div id="calculator" class="mt-8 pt-6 border-t border-gray-100 grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Monthly
+                                Contribution</label>
+                            <select id="calc-contribution" onchange="calculateRosca()"
+                                class="w-full bg-gray-50 border border-gray-200 rounded-lg p-2.5 font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-brandPurple">
+                                <option value="10000">₦10,000</option>
+                                <option value="25000" selected>₦25,000</option>
+                                <option value="50000">₦50,000</option>
+                                <option value="100000">₦100,000</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Number of
+                                Members</label>
+                            <select id="calc-members" onchange="calculateRosca()"
+                                class="w-full bg-gray-50 border border-gray-200 rounded-lg p-2.5 font-semibold text-gray-700 focus:outline-none focus:ring-2 focus:ring-brandPurple">
+                                <option value="5">5 Members</option>
+                                <option value="10" selected>10 Members</option>
+                                <option value="15">15 Members</option>
+                                <option value="20">20 Members</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Dynamic Results -->
+                    <div class="mt-4 bg-brandPurple/5 p-4 rounded-xl flex items-center justify-between">
+                        <div>
+                            <p class="text-xs font-bold text-gray-500">Your Turn Payout</p>
+                            <p id="calc-payout" class="text-xl font-extrabold text-brandPurple">₦250,000</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-xs font-bold text-gray-500">Cycle Duration</p>
+                            <p id="calc-duration" class="text-xl font-extrabold text-gray-900">10 Months</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 3: SAVINGS CLUB & CREDIT -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+            <!-- Left Grid: Text Content -->
+            <div class="lg:col-span-5 space-y-6 lg:order-1">
+                <div class="relative inline-block">
+                    <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 tracking-tight leading-tight">
+                        Savings club & credit.
+                    </h2>
+                    <!-- Mini drawing icon mock from original screenshot -->
+                    <div class="absolute -top-6 -right-10 text-brandPurple opacity-80 animate-bounce">
+                        <svg class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M13 10V3L4 14h7v7l9-11h-7z" />
+                        </svg>
+                    </div>
+                </div>
+
+                <p class="text-gray-600 text-lg leading-relaxed">
+                    Not an instant loan, but why stay broke because you are saving money. Save your income daily or
+                    weekly or monthly and take turn to get additional credit when you need one.
+                </p>
+                <div class="pt-2">
+                    <button onclick="openModal('get-started-modal')"
+                        class="bg-brandPurple text-white px-8 py-3.5 rounded-full font-bold hover:bg-brandPurpleHover hover:translate-y-[-2px] transition-all duration-200 custom-shadow-green">
+                        Join a group <i class="fa-solid fa-arrow-right"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Right Grid: Styled Interactive Status Card (As seen on original screenshot) -->
+            <div class="lg:col-span-7 flex justify-center lg:order-2 mt-12 lg:mt-0">
+                <div class="relative w-full max-w-sm">
+                    <!-- Purple offset backdrop card -->
+                    <div class="absolute top-4 left-4 w-full h-full bg-[#c3b4ff] rounded-[2rem] z-10"></div>
+                    
+                    <!-- Sun ornament (lime green circle with 3 purple rays) -->
+                    <div class="absolute -top-10 -right-10 w-24 h-24 z-10 flex items-center justify-center">
+                        <div class="absolute w-16 h-16 bg-[#C0F076] rounded-full"></div>
+                        <svg class="absolute w-20 h-20 text-[#5D17EB]" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round">
+                            <line x1="70" y1="30" x2="85" y2="15" />
+                            <line x1="85" y1="45" x2="98" y2="40" />
+                            <line x1="55" y1="15" x2="60" y2="0" />
+                        </svg>
+                    </div>
+
+                    <!-- Main White Card -->
+                    <div class="relative bg-white p-8 rounded-3xl border border-gray-100 z-20 space-y-6">
+                        <!-- User Profile inside card -->
+                        <div class="flex flex-col items-center text-center pb-4 border-b border-gray-100">
+                            <div class="w-20 h-20 rounded-full bg-gray-100 overflow-hidden mb-3 border border-gray-150">
+                                <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&q=80&w=150"
+                                    alt="Solomon Peter" class="w-full h-full object-cover">
+                            </div>
+                            <h4 class="font-bold text-lg text-gray-900">Solomon Peter</h4>
+                            <span class="inline-block bg-[#3ac054] text-white text-xs font-bold px-3 py-1 rounded-lg mt-2">
+                                Good standing
+                            </span>
+                        </div>
+
+                        <!-- Contribution Details -->
+                        <div class="space-y-4 text-sm">
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold text-gray-700">Contributions</span>
+                                <span id="solomon-contribute" class="font-bold text-gray-900">NGN12,000.00</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold text-gray-700">Withdrawals</span>
+                                <span id="solomon-withdrawal" class="font-bold text-gray-900">NGN12,000.00</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="font-semibold text-gray-700">Debt</span>
+                                <span class="font-bold text-gray-900">NGN0.00</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- SECTION 4: PARTNER WITH SUSUSHARE (Extended Platforms) -->
+    <section id="partner" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-16 space-y-4">
+                <p class="text-xs font-bold tracking-widest text-brandPurple uppercase">EXTENDED PLATFORMS</p>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900">Partner with AjoMoney</h2>
+            </div>
+
+            <!-- Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Card 1: Mobile Agents -->
+                <div
+                    class="bg-pastelPink p-8 rounded-[2rem] flex flex-col justify-between items-center text-center hover:scale-[1.02] transition-all border border-pink-100 shadow-sm relative overflow-hidden group">
+                    <div class="space-y-4 max-w-md mx-auto">
+                        <h3 class="text-2xl font-bold text-pink-700 inline-block border-b-2 border-pink-300 pb-1">Mobile Agents</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Make money as an agent when you help people sign up, perform thrift, contribute and access
+                            credit. Help the unbanked become banked.
+                        </p>
+                    </div>
+                    <!-- Cartoonish Delivery/Agent Vehicle SVG Illustration -->
+                    <div class="mt-6 w-full">
+                        <svg class="w-64 h-44 mx-auto" viewBox="0 0 250 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Cash sticking out of wallet -->
+                            <path d="M165 30 L180 15 L190 22 L175 37 Z" fill="#C0F076" stroke="#1A1A1A" stroke-width="3.5" stroke-linejoin="round" />
+                            <path d="M160 25 L172 10 L182 17 L170 32 Z" fill="#A3E635" stroke="#1A1A1A" stroke-width="3.5" stroke-linejoin="round" />
+                            <!-- Wallet body -->
+                            <rect x="135" y="28" width="55" height="38" rx="8" fill="#F87171" stroke="#1A1A1A" stroke-width="3.5" transform="rotate(-15 135 28)" />
+                            <!-- Wallet flap -->
+                            <path d="M165 25 L190 32 C192 33 192 36 190 38 L175 42 Z" fill="#FCA5A5" stroke="#1A1A1A" stroke-width="3.5" stroke-linejoin="round" />
+                            <!-- Wallet button -->
+                            <circle cx="180" cy="34" r="4" fill="#FCD34D" stroke="#1A1A1A" stroke-width="2.5" />
+
+                            <!-- Van Body Group with slight tilt -->
+                            <g transform="rotate(-2 125 100)">
+                                <!-- Bumper front -->
+                                <rect x="25" y="115" width="12" height="22" rx="4" fill="#E2E8F0" stroke="#1A1A1A" stroke-width="3.5" />
+                                
+                                <!-- Main Van Hull -->
+                                <path d="M40 125 L35 90 C34 75 45 60 65 60 L195 65 C205 65 215 75 215 88 L215 135 C215 140 210 145 200 145 L50 142 C44 142 40 135 40 125 Z" fill="#8B5CF6" stroke="#1A1A1A" stroke-width="3.5" stroke-linejoin="round" />
+                                
+                                <!-- Bumper back -->
+                                <rect x="210" y="118" width="10" height="15" rx="3" fill="#E2E8F0" stroke="#1A1A1A" stroke-width="3.5" />
+                                
+                                <!-- Front Window -->
+                                <path d="M50 85 L70 85 L70 68 L60 68 C52 68 49 76 50 85 Z" fill="#C0F076" stroke="#1A1A1A" stroke-width="3.5" stroke-linejoin="round" />
+                                <!-- Front window highlights -->
+                                <line x1="58" y1="72" x2="64" y2="80" stroke="#FFF" stroke-width="2.5" stroke-linecap="round" />
+
+                                <!-- Middle Window -->
+                                <path d="M78 85 L120 85 L120 68 L78 68 Z" fill="#C0F076" stroke="#1A1A1A" stroke-width="3.5" stroke-linejoin="round" />
+                                <line x1="90" y1="72" x2="105" y2="80" stroke="#FFF" stroke-width="2.5" stroke-linecap="round" />
+
+                                <!-- Back Window -->
+                                <path d="M128 85 L165 85 C170 85 172 82 172 78 L170 68 L128 68 Z" fill="#C0F076" stroke="#1A1A1A" stroke-width="3.5" stroke-linejoin="round" />
+                                <line x1="140" y1="72" x2="152" y2="80" stroke="#FFF" stroke-width="2.5" stroke-linecap="round" />
+
+                                <!-- Side Stripes or details -->
+                                <line x1="40" y1="102" x2="215" y2="108" stroke="#1A1A1A" stroke-width="3.5" />
+
+                                <!-- Door handle -->
+                                <rect x="110" y="93" width="10" height="5" rx="2.5" fill="#1A1A1A" />
+
+                                <!-- Wheel Arches -->
+                                <path d="M60 142 A 18 18 0 0 1 96 142" fill="#FFE3E3" stroke="#1A1A1A" stroke-width="3.5" />
+                                <path d="M160 144 A 18 18 0 0 1 196 144" fill="#FFE3E3" stroke="#1A1A1A" stroke-width="3.5" />
+
+                                <!-- Wheels -->
+                                <!-- Front Wheel -->
+                                <circle cx="78" cy="144" r="18" fill="#374151" stroke="#1A1A1A" stroke-width="3.5" />
+                                <circle cx="78" cy="144" r="8" fill="#C0F076" stroke="#1A1A1A" stroke-width="3.5" />
+                                <!-- Back Wheel -->
+                                <circle cx="178" cy="146" r="18" fill="#374151" stroke="#1A1A1A" stroke-width="3.5" />
+                                <circle cx="178" cy="146" r="8" fill="#C0F076" stroke="#1A1A1A" stroke-width="3.5" />
+
+                                <!-- Headlight -->
+                                <path d="M35 105 A 6 6 0 0 1 40 115 Z" fill="#FCD34D" stroke="#1A1A1A" stroke-width="3" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 2: Partners API -->
+                <div
+                    class="bg-pastelPurple p-8 rounded-[2rem] flex flex-col justify-between items-center text-center hover:scale-[1.02] transition-all border border-purple-100 shadow-sm relative overflow-hidden group">
+                    <div class="space-y-4 max-w-md mx-auto">
+                        <h3 class="text-2xl font-bold text-brandPurple inline-block border-b-2 border-purple-300 pb-1">Partners API</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Savings and credit as a service. API for developers and businesses. Launch your savings and
+                            credit platform or solution into your users' workflow and build credit histories.
+                        </p>
+                    </div>
+                    <!-- Terminal/Code SVG Illustration -->
+                    <div class="mt-6 w-full">
+                        <svg class="w-64 h-36 mx-auto" viewBox="0 0 250 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Code Window Bracket -->
+                            <rect x="35" y="20" width="180" height="100" rx="12" fill="#F5EEFF" stroke="#1A1A1A" stroke-width="3.5" />
+                            <!-- Title Bar -->
+                            <path d="M35 32 L215 32" stroke="#1A1A1A" stroke-width="3.5" />
+                            <circle cx="50" cy="26" r="4" fill="#F87171" stroke="#1A1A1A" stroke-width="2" />
+                            <circle cx="62" cy="26" r="4" fill="#FCD34D" stroke="#1A1A1A" stroke-width="2" />
+                            <circle cx="74" cy="26" r="4" fill="#4ADE80" stroke="#1A1A1A" stroke-width="2" />
+                            
+                            <!-- Code Lines inside -->
+                            <g transform="translate(45, 45)">
+                                <!-- const client = Ajo(); -->
+                                <rect x="0" y="0" width="45" height="10" rx="3" fill="#A78BFA" stroke="#1A1A1A" stroke-width="2.5" />
+                                <rect x="52" y="0" width="55" height="10" rx="3" fill="#60A5FA" stroke="#1A1A1A" stroke-width="2.5" />
+                                <rect x="114" y="0" width="35" height="10" rx="3" fill="#F59E0B" stroke="#1A1A1A" stroke-width="2.5" />
+
+                                <!-- client.startSavings() -->
+                                <rect x="10" y="20" width="30" height="10" rx="3" fill="#EC4899" stroke="#1A1A1A" stroke-width="2.5" />
+                                <circle cx="50" cy="25" r="4" fill="#34D399" stroke="#1A1A1A" stroke-width="2.5" />
+                                <rect x="62" y="20" width="60" height="10" rx="3" fill="#60A5FA" stroke="#1A1A1A" stroke-width="2.5" />
+
+                                <!-- Output: success -->
+                                <path d="M15 45 L25 55 L50 35" stroke="#34D399" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <rect x="60" y="42" width="70" height="10" rx="3" fill="#34D399" stroke="#1A1A1A" stroke-width="2.5" />
+                            </g>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 3: Cooperative -->
+                <div
+                    class="bg-pastelYellow p-8 rounded-[2rem] flex flex-col justify-between items-center text-center hover:scale-[1.02] transition-all border border-amber-100 shadow-sm relative overflow-hidden group">
+                    <div class="space-y-4 max-w-md mx-auto">
+                        <h3 class="text-2xl font-bold text-amber-700 inline-block border-b-2 border-amber-300 pb-1">Cooperative</h3>
+                        <p class="text-gray-600 leading-relaxed text-sm">
+                            Turn your cooperative into a digital bank, grow value, and help your members thrive with
+                            structured thrift savings, automated deposits, and digital loan management.
+                        </p>
+                    </div>
+                    <!-- Cooperative Building SVG Illustration -->
+                    <div class="mt-6 w-full">
+                        <svg class="w-64 h-36 mx-auto" viewBox="0 0 250 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <!-- Base / Ground -->
+                            <line x1="20" y1="120" x2="230" y2="120" stroke="#1A1A1A" stroke-width="4.5" stroke-linecap="round" />
+                            
+                            <!-- Building main facade -->
+                            <path d="M45 120 L45 65 L205 65 L205 120 Z" fill="#FEF9EC" stroke="#1A1A1A" stroke-width="3.5" stroke-linejoin="round" />
+                            
+                            <!-- Roof / Triangle -->
+                            <path d="M35 65 L125 30 L215 65 Z" fill="#F59E0B" stroke="#1A1A1A" stroke-width="3.5" stroke-linejoin="round" />
+                            <!-- Roof sign -->
+                            <circle cx="125" cy="50" r="10" fill="#34D399" stroke="#1A1A1A" stroke-width="3" />
+                            <path d="M125 45 L125 55 M121 48 L129 48" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" />
+
+                            <!-- Pillars (3 pillars) -->
+                            <!-- Pillar 1 -->
+                            <rect x="60" y="75" width="16" height="45" rx="3" fill="#FDE047" stroke="#1A1A1A" stroke-width="3" />
+                            <!-- Pillar 2 -->
+                            <rect x="117" y="75" width="16" height="45" rx="3" fill="#FDE047" stroke="#1A1A1A" stroke-width="3" />
+                            <!-- Pillar 3 -->
+                            <rect x="174" y="75" width="16" height="45" rx="3" fill="#FDE047" stroke="#1A1A1A" stroke-width="3" />
+
+                            <!-- Door / Central arch behind pillar 2 -->
+                            <path d="M110 120 L110 95 C110 88 140 88 140 95 L140 120 Z" fill="#1A1A1A" />
+                        </svg>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 5: OUR INVESTORS AND PARTNERS -->
+    <section class="py-16 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h4 class="text-center text-xs font-extrabold uppercase tracking-widest text-gray-400 mb-8">OUR INVESTORS
+                AND PARTNERS</h4>
+            <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16 opacity-60">
+                <!-- Mockups of logo styling -->
+                <div class="flex items-center gap-2 text-xl font-extrabold text-blue-600 tracking-tight">
+                    <i class="fa-solid fa-wave-square"></i> callphone
+                </div>
+                <div class="flex items-center gap-1 text-xl font-extrabold text-emerald-600 tracking-tight">
+                    <i class="fa-solid fa-leaf"></i> GREEN
+                </div>
+                <div class="flex items-center gap-2 text-xl font-extrabold text-blue-800 tracking-tight">
+                    <i class="fa-solid fa-chart-column"></i>
+                </div>
+                <div class="flex items-center gap-1 text-2xl font-extrabold text-blue-500 tracking-tight">
+                    <i class="fa-solid fa-asterisk"></i> seedstars
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 6: DOWNLOAD APP BANNER -->
+    <section class="py-12 md:py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div
+                class="rounded-[2.5rem] p-8 md:p-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center overflow-hidden relative"
+                style="background: linear-gradient(135deg, #e8e0ff 0%, #f0ebff 40%, #e8e0ff 70%, #ddd5ff 100%);">
+
+                <!-- === BACKGROUND DECORATIVE ELEMENTS === -->
+
+                <!-- Wavy blob top-right -->
+                <div class="absolute -top-16 -right-16 w-72 h-72 opacity-40 pointer-events-none">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#c4b5fd" d="M47.5,-57.2C59.4,-46.3,65.2,-29.5,67.1,-12.5C69,4.5,67.1,21.7,59.1,35.5C51.1,49.2,37.1,59.5,21.2,65.1C5.3,70.8,-12.5,71.8,-27.3,65.3C-42.1,58.8,-53.9,44.8,-61.3,28.6C-68.7,12.4,-71.8,-6,-66.2,-21.3C-60.5,-36.6,-46.1,-48.8,-31,-57.8C-15.9,-66.9,0,-72.9,15.1,-70.7C30.2,-68.5,35.6,-68.1,47.5,-57.2Z" transform="translate(100 100)" />
+                    </svg>
+                </div>
+
+                <!-- Wavy blob bottom-left -->
+                <div class="absolute -bottom-20 -left-20 w-80 h-80 opacity-30 pointer-events-none">
+                    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                        <path fill="#a78bfa" d="M39.5,-47.9C51.7,-39.7,62.5,-28.2,66.3,-14.4C70.1,-0.5,67,15.7,58.8,28.5C50.5,41.3,37.2,50.7,22.5,57.2C7.8,63.7,-8.3,67.3,-22.8,62.7C-37.3,58.1,-50.2,45.3,-58.3,30.1C-66.4,14.9,-69.7,-2.7,-64.6,-17.3C-59.5,-31.8,-45.9,-43.3,-32,-51.8C-18.1,-60.3,-4,-65.8,8.5,-64.9C21,-64.1,27.3,-56.1,39.5,-47.9Z" transform="translate(100 100)" />
+                    </svg>
+                </div>
+
+                <!-- 3D Bubble - top center-right large -->
+                <div class="absolute top-6 right-[30%] w-12 h-12 rounded-full pointer-events-none"
+                    style="background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.8) 0%, #c4b5fd 50%, #7c3aed 100%); box-shadow: inset -3px -3px 8px rgba(0,0,0,0.15), 2px 4px 12px rgba(124,58,237,0.3);"></div>
+
+                <!-- 3D Bubble - top right small -->
+                <div class="absolute top-10 right-16 w-6 h-6 rounded-full pointer-events-none"
+                    style="background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.85) 0%, #ddd6fe 50%, #8b5cf6 100%); box-shadow: inset -2px -2px 5px rgba(0,0,0,0.1), 1px 2px 8px rgba(124,58,237,0.25);"></div>
+
+                <!-- 3D Bubble - right side large -->
+                <div class="absolute top-1/2 -translate-y-1/2 right-8 w-16 h-16 rounded-full pointer-events-none"
+                    style="background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.75) 0%, #c4b5fd 55%, #6d28d9 100%); box-shadow: inset -4px -4px 10px rgba(0,0,0,0.2), 3px 6px 20px rgba(109,40,217,0.35);"></div>
+
+                <!-- 3D Bubble - right side medium -->
+                <div class="absolute bottom-20 right-6 w-10 h-10 rounded-full pointer-events-none"
+                    style="background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.8) 0%, #ede9fe 50%, #7c3aed 100%); box-shadow: inset -3px -3px 8px rgba(0,0,0,0.12), 2px 3px 12px rgba(124,58,237,0.28);"></div>
+
+                <!-- 3D Bubble - bottom center small -->
+                <div class="absolute bottom-8 left-[40%] w-8 h-8 rounded-full pointer-events-none"
+                    style="background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.8) 0%, #ddd6fe 50%, #8b5cf6 100%); box-shadow: inset -2px -2px 6px rgba(0,0,0,0.12), 2px 3px 10px rgba(124,58,237,0.25);"></div>
+
+                <!-- 3D Bubble - top left area -->
+                <div class="absolute top-12 left-[38%] w-7 h-7 rounded-full pointer-events-none"
+                    style="background: radial-gradient(circle at 35% 35%, rgba(255,255,255,0.85) 0%, #ede9fe 50%, #7c3aed 100%); box-shadow: inset -2px -2px 5px rgba(0,0,0,0.1), 1px 2px 8px rgba(124,58,237,0.2);"></div>
+
+                <!-- Dot grid pattern - left side -->
+                <div class="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none opacity-40">
+                    <svg width="80" height="120" viewBox="0 0 80 120">
+                        <defs><pattern id="dots-l" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#7c3aed"/></pattern></defs>
+                        <rect width="80" height="120" fill="url(#dots-l)"/>
+                    </svg>
+                </div>
+
+                <!-- Dot grid pattern - right side -->
+                <div class="absolute right-4 top-16 pointer-events-none opacity-40">
+                    <svg width="80" height="100" viewBox="0 0 80 100">
+                        <defs><pattern id="dots-r" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1.5" fill="#7c3aed"/></pattern></defs>
+                        <rect width="80" height="100" fill="url(#dots-r)"/>
+                    </svg>
+                </div>
+
+                <!-- Ring circle outline - top left -->
+                <div class="absolute -top-8 left-[30%] w-24 h-24 rounded-full border-2 border-purple-300/50 pointer-events-none"></div>
+                <!-- Ring circle outline - bottom right -->
+                <div class="absolute -bottom-6 right-[25%] w-16 h-16 rounded-full border-2 border-purple-300/40 pointer-events-none"></div>
+
+                <!-- Left: iPhone App Mockup -->
+                <div class="lg:col-span-5 flex justify-center relative">
+                    <!-- Glowing aura behind phone -->
+                    <div class="absolute w-80 h-80 bg-brandPurple/15 rounded-full blur-3xl -z-10"></div>
+
+                    <!-- Premium iPhone-style Phone Frame -->
+                    <div class="relative" style="width: 240px;">
+                        <!-- Side buttons (left - volume) -->
+                        <div class="absolute -left-[5px] top-[80px] w-[5px] h-[30px] bg-slate-700 rounded-l-md"></div>
+                        <div class="absolute -left-[5px] top-[120px] w-[5px] h-[44px] bg-slate-700 rounded-l-md"></div>
+                        <div class="absolute -left-[5px] top-[174px] w-[5px] h-[44px] bg-slate-700 rounded-l-md"></div>
+                        <!-- Side buttons (right - power) -->
+                        <div class="absolute -right-[5px] top-[120px] w-[5px] h-[60px] bg-slate-700 rounded-r-md"></div>
+
+                        <!-- Outer phone shell -->
+                        <div class="w-full bg-[#1a1a2e] rounded-[2.8rem] p-[3px] shadow-[0_30px_80px_rgba(0,0,0,0.5)]" style="aspect-ratio: 9/19.5;">
+                            <!-- Inner bezel -->
+                            <div class="w-full h-full bg-[#0d0d1a] rounded-[2.6rem] p-[4px] overflow-hidden">
+                                <!-- Screen -->
+                                <div class="w-full h-full bg-brandPurple rounded-[2.4rem] overflow-hidden flex flex-col text-white relative">
+
+                                    <!-- Dynamic Island notch -->
+                                    <div class="absolute top-3 left-1/2 -translate-x-1/2 w-[90px] h-[26px] bg-black rounded-full z-30 flex items-center justify-center gap-2">
+                                        <div class="w-2 h-2 rounded-full bg-[#1a1a2e]"></div>
+                                        <div class="w-3 h-3 rounded-full border border-[#333] bg-[#111]"></div>
+                                    </div>
+
+                                    <!-- Status bar -->
+                                    <div class="flex justify-between items-center px-5 pt-[44px] pb-1">
+                                        <span class="text-[11px] font-bold tracking-wide">ajo_app</span>
+                                        <i class="fa-solid fa-wifi text-[10px] opacity-90"></i>
+                                    </div>
+
+                                    <!-- App Core Area -->
+                                    <div class="flex-1 flex flex-col items-center justify-center px-5 space-y-4 text-center -mt-2">
+                                        <!-- App Icon -->
+                                        <div class="w-[52px] h-[52px] bg-white text-brandPurple rounded-[14px] flex items-center justify-center font-black text-[22px] shadow-xl">
+                                            A
+                                        </div>
+                                        <!-- Pool info -->
+                                        <div class="space-y-1">
+                                            <p class="text-[15px] font-bold tracking-wide">My Ajo Pool</p>
+                                            <p class="text-[26px] font-black text-brandGreen tracking-tight">₦250,000</p>
+                                        </div>
+                                        <!-- Rank card -->
+                                        <div class="w-full bg-white/[0.12] backdrop-blur-sm px-4 py-3 rounded-2xl text-left space-y-2">
+                                            <div class="flex justify-between items-center">
+                                                <span class="text-[11px] font-semibold opacity-80">My Rank</span>
+                                                <span class="text-[11px] font-black">#2 of 10</span>
+                                            </div>
+                                            <div class="w-full bg-white/20 h-[5px] rounded-full overflow-hidden">
+                                                <div class="bg-brandGreen h-full rounded-full" style="width: 20%"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Bottom Navigation -->
+                                    <div class="flex justify-around items-center px-4 py-3 border-t border-white/10">
+                                        <div class="flex flex-col items-center gap-0.5">
+                                            <i class="fa-solid fa-house text-[14px] text-brandGreen"></i>
+                                        </div>
+                                        <div class="flex flex-col items-center gap-0.5">
+                                            <i class="fa-solid fa-wallet text-[14px] opacity-50"></i>
+                                        </div>
+                                        <div class="flex flex-col items-center gap-0.5">
+                                            <i class="fa-solid fa-chart-line text-[14px] opacity-50"></i>
+                                        </div>
+                                        <div class="flex flex-col items-center gap-0.5">
+                                            <i class="fa-solid fa-user text-[14px] opacity-50"></i>
+                                        </div>
+                                    </div>
+
+                                    <!-- Home Indicator bar -->
+                                    <div class="flex justify-center pb-2">
+                                        <div class="w-[100px] h-[4px] bg-white/30 rounded-full"></div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Text Content and Action -->
+                <div class="lg:col-span-7 space-y-6">
+                    <h2 class="text-3xl md:text-5xl font-extrabold text-gray-900 leading-tight">
+                        Join AjoMoney
+                    </h2>
+                    <p class="text-gray-600 text-lg leading-relaxed">
+                        Become financially free and included when you build credit through flexible savings such as
+                        rotating group savings and thrift contributions with collective investments.
+                    </p>
+                    <div class="pt-2">
+                        <button onclick="openModal('get-started-modal')"
+                            class="bg-brandPurple text-white px-8 py-4 rounded-full font-bold flex items-center justify-center gap-2 hover:bg-brandPurpleHover hover:translate-y-[-2px] transition-all duration-200 custom-shadow-green">
+                            Get started
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 7: AS FEATURED IN -->
+    <section class="py-16 bg-white border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-6">
+            <h4 class="text-center text-xs font-extrabold uppercase tracking-widest text-gray-400 mb-8">AS FEATURED IN
+            </h4>
+            <div class="flex flex-wrap items-center justify-center gap-10 md:gap-16 opacity-75">
+                <!-- Styled/simulated media brands matching the original screenshot -->
+                <div class="flex items-center gap-1 text-lg font-black text-slate-900 italic">
+                    <span class="text-blue-600">DISRUPT</span> AFRICA
+                </div>
+                <div class="flex items-center gap-1 text-lg font-black text-orange-600">
+                    big<span class="text-black">five</span>digital
+                </div>
+                <div class="flex items-center gap-1 text-lg font-black text-white bg-red-600 px-2 py-1">
+                    Techpoint
+                </div>
+                <div
+                    class="flex items-center gap-1 text-lg font-bold text-white bg-blue-600 px-2 py-1 text-center leading-tight">
+                    FOUNDER<br>INSTITUTE
+                </div>
+                <div class="flex items-center gap-1 text-lg font-black text-white bg-black px-3 py-1">
+                    TC
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ SECTION (Highly helpful expansion) -->
+    <section id="faq" class="py-20 bg-gray-50 border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-extrabold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+
+            <div class="space-y-4">
+                <!-- FAQ Item 1 -->
+                <div class="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
+                    <button onclick="toggleFaq(1)"
+                        class="w-full flex justify-between items-center font-bold text-left text-gray-900 hover:text-brandPurple transition-colors">
+                        <span>How does a SusuShare Rotating Group work?</span>
+                        <i id="faq-icon-1" class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="faq-content-1" class="hidden mt-4 text-gray-600 text-sm leading-relaxed">
+                        A rotating group (ROSCA) consists of members who agree to contribute a set amount periodically
+                        (e.g., weekly or monthly). Each period, one member receives the entire pool. This continues
+                        until every member has had their turn, providing interest-free credit and forced savings.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
+                    <button onclick="toggleFaq(2)"
+                        class="w-full flex justify-between items-center font-bold text-left text-gray-900 hover:text-brandPurple transition-colors">
+                        <span>Is my money safe with SusuShare?</span>
+                        <i id="faq-icon-2" class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="faq-content-2" class="hidden mt-4 text-gray-600 text-sm leading-relaxed">
+                        Yes! SusuShare digitizes traditional mutual groups. All members are verified using legal
+                        identities (BVN/NIN), bank-level security protocols are implemented, and we secure funds in
+                        escrow with regulated microfinance banking partners.
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-white rounded-2xl border border-gray-100 p-6 shadow-sm">
+                    <button onclick="toggleFaq(3)"
+                        class="w-full flex justify-between items-center font-bold text-left text-gray-900 hover:text-brandPurple transition-colors">
+                        <span>Are there any hidden fees or interest charges?</span>
+                        <i id="faq-icon-3" class="fa-solid fa-chevron-down transition-transform"></i>
+                    </button>
+                    <div id="faq-content-3" class="hidden mt-4 text-gray-600 text-sm leading-relaxed">
+                        SusuShare has zero interest charges. Rotating credit is strictly pool-based with no cost of
+                        borrowing. We only charge a small processing commission per group cycle to cover group
+                        administration and platform upkeep.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-gray-100 pt-16 pb-8">
+        <div class="max-w-7xl mx-auto px-6">
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-gray-100">
+
+                <!-- Column 1: Info -->
+                <div class="space-y-4">
+                    <a href="#" class="flex items-center gap-2">
+                        <div
+                            class="w-8 h-8 rounded-full bg-brandPurple text-white flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-arrows-spin"></i>
+                        </div>
+                        <span class="text-xl font-bold text-brandPurple tracking-tight lowercase">ajo<span
+                                class="text-gray-900">money</span></span>
+                    </a>
+                    <p class="text-sm text-gray-500 leading-relaxed">
+                        The ultimate digital partner for rotating savings groups, mutual trusts, and community
+                        micro-credit.
+                    </p>
+                </div>
+
+                <!-- Column 2: Features -->
+                <div>
+                    <h5 class="font-bold text-sm text-gray-900 uppercase tracking-wider mb-4">Features</h5>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#rosca-section" class="hover:text-brandPurple">Rotating group savings</a></li>
+                        <li><a href="#partner" class="hover:text-brandPurple">Thrift contributions</a></li>
+                        <li><a href="#features" class="hover:text-brandPurple">Personal savings</a></li>
+                        <li><a href="#" class="hover:text-brandPurple">Investments</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Company -->
+                <div>
+                    <h5 class="font-bold text-sm text-gray-900 uppercase tracking-wider mb-4">Company</h5>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-brandPurple">About Us</a></li>
+                        <li><a href="#" class="hover:text-brandPurple">Contact</a></li>
+                        <li><a href="#" class="hover:text-brandPurple">Privacy policy</a></li>
+                        <li><a href="#" class="hover:text-brandPurple">Terms of service</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact -->
+                <div>
+                    <h5 class="font-bold text-sm text-gray-900 uppercase tracking-wider mb-4">Contact</h5>
+                    <div class="space-y-3 text-sm text-gray-500">
+                        <p class="flex items-center gap-2">
+                            <i class="fa-solid fa-envelope text-brandPurple"></i> contact@ajo.money
+                        </p>
+                        <p class="flex items-center gap-2">
+                            <i class="fa-solid fa-phone text-brandPurple"></i> 0700-AJO-MONEY
+                        </p>
+                        <div class="flex gap-4 pt-2">
+                            <a href="#"
+                                class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-brandPurple hover:text-white transition-all"><i
+                                    class="fa-brands fa-linkedin-in"></i></a>
+                            <a href="#"
+                                class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-brandPurple hover:text-white transition-all"><i
+                                    class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"
+                                class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-brandPurple hover:text-white transition-all"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                            <a href="#"
+                                class="w-8 h-8 rounded-full bg-gray-100 flex items-center justify-center hover:bg-brandPurple hover:text-white transition-all"><i
+                                    class="fa-brands fa-x-twitter"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+                <p>&copy; 2026 AjoMoney. All rights reserved.</p>
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-language text-gray-500"></i>
+                    <span>English</span>
+                </div>
+            </div>
+
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE GET STARTED MODAL -->
+    <div id="get-started-modal"
+        class="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center hidden opacity-0 transition-opacity duration-300">
+        <div
+            class="bg-white w-full max-w-md p-8 rounded-3xl shadow-2xl relative mx-6 transform scale-95 transition-transform duration-300">
+            <!-- Close Button -->
+            <button onclick="closeModal('get-started-modal')"
+                class="absolute top-4 right-4 text-gray-400 hover:text-gray-900 text-lg">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <h3 class="text-2xl font-extrabold text-gray-900 mb-2">Get Started with AjoMoney</h3>
+            <p class="text-gray-500 text-sm mb-6">Choose how you want to build your finance journey today.</p>
+
+            <form class="space-y-4" onsubmit="handleFormSubmit(event)">
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Your Full Name</label>
+                    <input type="text" required placeholder="e.g. Samuel Adebayo"
+                        class="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-brandPurple">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-500 mb-1">Email Address</label>
+                    <input type="email" required placeholder="samuel@example.com"
+                        class="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-brandPurple">
+                </div>
+                <div>
+                    <label class="block text-xs font-bold uppercase text-gray-500 mb-1">What would you like to
+                        do?</label>
+                    <select
+                        class="w-full bg-gray-50 border border-gray-200 rounded-xl p-3 text-sm focus:outline-none focus:ring-2 focus:ring-brandPurple font-semibold text-gray-700">
+                        <option>Join a Rotating Ajo Savings Group</option>
+                        <option>Register as a Mobile Ajo Agent</option>
+                        <option>Integrate Partner APIs</option>
+                        <option>Digitize my Local Cooperative</option>
+                    </select>
+                </div>
+
+                <button type="submit"
+                    class="w-full bg-brandPurple hover:bg-brandPurpleHover text-white py-3.5 rounded-xl font-bold hover:translate-y-[-1px] transition-all mt-2 custom-shadow-green">
+                    Create My Free Account
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <!-- SUCCESS TOAST DIALOG (No browser alerts allowed) -->
+    <div id="success-toast"
+        class="fixed bottom-6 right-6 bg-emerald-950 text-emerald-300 border border-emerald-800 p-4 rounded-2xl shadow-xl flex items-center gap-3 z-50 transform translate-y-20 opacity-0 transition-all duration-300">
+        <div class="w-8 h-8 rounded-full bg-emerald-800 flex items-center justify-center text-white">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <div>
+            <p class="font-bold text-sm">Success!</p>
+            <p class="text-xs opacity-80">You have joined the AjoMoney movement.</p>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Toggle mobile nav menu
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.className = "fa-solid fa-xmark text-2xl";
+            } else {
+                menu.classList.add('hidden');
+                icon.className = "fa-solid fa-bars text-2xl";
+            }
+        }
+
+        // Toggle Accordion FAQs
+        function toggleFaq(index) {
+            const content = document.getElementById(`faq-content-${index}`);
+            const icon = document.getElementById(`faq-icon-${index}`);
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        }
+
+        // ROSCA Calculator logic
+        function calculateRosca() {
+            const contribution = parseInt(document.getElementById('calc-contribution').value);
+            const members = parseInt(document.getElementById('calc-members').value);
+
+            const totalPool = contribution * members;
+
+            // Update UI elements with formatted Naira
+            document.getElementById('center-pool-display').innerText = `₦${totalPool.toLocaleString()}`;
+            document.getElementById('calc-payout').innerText = `₦${totalPool.toLocaleString()}`;
+            document.getElementById('calc-duration').innerText = `${members} Months`;
+        }
+
+        // Contribution simulator logic
+        let contributionBalance = 20000;
+        let withdrawalBalance = 10000;
+        function simulateContribution() {
+            contributionBalance += 5000;
+            document.getElementById('solomon-contribute').innerText = `NGN ${contributionBalance.toLocaleString('en-US', { minimumFractionDigits: 2 })}`;
+
+            // Show custom visual confirmation toast inside card
+            const toast = document.getElementById('simulation-toast');
+            toast.style.opacity = '1';
+            setTimeout(() => {
+                toast.style.opacity = '0';
+            }, 2000);
+        }
+
+        // Modal triggers
+        function openModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+                modal.querySelector('div').classList.remove('scale-95');
+            }, 10);
+        }
+
+        function closeModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.add('opacity-0');
+            modal.querySelector('div').classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300);
+        }
+
+        // Handle Get Started Submission (Displays beautiful custom toast instead of alert)
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            closeModal('get-started-modal');
+
+            const successToast = document.getElementById('success-toast');
+            successToast.classList.remove('translate-y-20', 'opacity-0');
+
+            setTimeout(() => {
+                successToast.classList.add('translate-y-20', 'opacity-0');
+            }, 4000);
+        }
+    </script>
+</body>
+
+</html>
